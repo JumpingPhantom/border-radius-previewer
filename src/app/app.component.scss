@@ -1,0 +1,39 @@
+.preview-box {
+    width: 400px;
+    height: 300px;
+    border: 8px solid black;
+    padding: 1rem;
+    position: relative;
+}
+
+.input {
+    padding: 0.25rem;
+    width: 160px;
+    height: 36px;
+    border: none;
+    font-size: larger;
+    background-color: #f3f3f3;
+    margin: 4px;
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.shorthand-section {
+    position: absolute;
+    bottom: 1rem;
+}
+
+p {
+    font-family: "Roboto Mono", monospace;
+    font-weight: light;
+}

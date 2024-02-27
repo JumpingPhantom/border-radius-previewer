@@ -1,0 +1,71 @@
+<div class="preview-box" [style.border-radius]="radius">
+  <p>
+    border-top-left-radius:
+    {{ topLeft.toString() != "" ? topLeft.toString() + "px;" : "0px;" }} <br />
+    border-top-right-radius:
+    {{ topRight.toString() != "" ? topRight.toString() + "px;" : "0px;" }}
+    <br />
+    border-bottom-right-radius:
+    {{
+      bottomRight.toString() != "" ? bottomRight.toString() + "px;" : "0px;"
+    }}
+    <br />
+    border-bottom-left-radius:
+    {{ bottomLeft.toString() != "" ? bottomLeft.toString() + "px;" : "0px;" }}
+  </p>
+
+  <div class="shorthand-section">
+    <h3>Shorthand synatx:</h3>
+    <p>
+      border-radius:
+      {{ topLeft.toString() != "" ? topLeft.toString() + "px" : "0px" }}
+      {{ topRight.toString() != "" ? topRight.toString() + "px" : "0px" }}
+      {{ bottomRight.toString() != "" ? bottomRight.toString() + "px" : "0px" }}
+      {{ bottomLeft.toString() != "" ? bottomLeft.toString() + "px;" : "0px;" }}
+    </p>
+    <div
+      *ngIf="
+        topLeft == topRight &&
+        topRight == bottomLeft &&
+        bottomLeft == bottomRight
+      "
+    >
+      <p>
+        border-radius:
+        {{ topLeft.toString() != "" ? topLeft.toString() + "px;" : "0px;" }}
+        <br />
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <input
+    type="number"
+    class="input top-left"
+    placeholder="Top left"
+    min="0"
+    (input)="handleInputChange($event)"
+  />
+  <input
+    type="number"
+    class="input top-right"
+    placeholder="Top right"
+    min="0"
+    (input)="handleInputChange($event)"
+  />
+  <input
+    type="number"
+    class="input bottom-left"
+    placeholder="Bottom left"
+    min="0"
+    (input)="handleInputChange($event)"
+  />
+  <input
+    type="number"
+    class="input bottom-right"
+    placeholder="Bottom right"
+    min="0"
+    (input)="handleInputChange($event)"
+  />
+</div>
